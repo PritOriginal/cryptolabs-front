@@ -1,14 +1,14 @@
 *,
 *::after,
 *::before {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 a {
     color: white;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 html {
@@ -51,13 +51,12 @@ header {
 .block {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     padding: 8px;
     border: 1px solid;
-    border-radius: 4px;
     background-color: rgb(24, 24, 24);
     height: fit-content;
-    
+
     &.half {
         width: 50%;
     }
@@ -65,27 +64,101 @@ header {
 
 .row {
     display: flex;
-    gap: 1.5rem;
+    gap: 10px;
+
+    &-full {
+        &>* {
+            flex: 1;
+        }
+    }
 }
 
 .title {
     padding: 12px 0;
 }
 
+textarea,
 input[type="text"] {
     padding: 12px;
 }
 
 button {
-    padding: 12px;
+    padding: 8px;
+    background-color: white;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        background-color: #505050;
+        color: white;
+    }
+
+    &:disabled {
+        background-color: #404040;
+        color: white;
+    }
 }
 
 .radio-button {
     display: flex;
-    gap: 10px;
+    gap: 8px;
 }
 
-canvas { 
-    // width: 300px;
+canvas {
     background-color: white;
+}
+
+.select-file {
+    cursor: pointer;
+    padding: 4px;
+    color: black;
+    background-color: white;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        background-color: #505050;
+        color: white;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+        border: 2px dashed #2daeff;
+        padding: 12px;
+
+        &__file {
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+}
+
+.checkbox {
+    display: flex;
+    gap: 0.5rem;
+}
+
+table {
+    // max-height: 200px;
+    width: 100%;
+    border: 1px solid;
+    border-radius: 4px;
+    border-collapse: collapse;
+
+    th {
+        text-align: left;
+        background-color: rgb(45, 174, 255);
+        font-weight: bold;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    tr:nth-child(even) {
+        background-color: #2c2c2c;
+    }
 }
