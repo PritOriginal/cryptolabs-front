@@ -19,8 +19,8 @@ class MeasuringInformationService extends BaseService {
         const params = new URLSearchParams({
             alphabet_set: alphabetSet,
             alphabet: alphabetSet === "custom" ? alphabet : "",
-          }).toString()
-          
+        }).toString()
+
         return fetch("/api/measuring_information/volume?" + params).then(this.getResponse)
     }
 
@@ -29,7 +29,7 @@ class MeasuringInformationService extends BaseService {
             text: text,
             alphabet_set: alphabetSet,
             alphabet: alphabetSet === "custom" ? alphabet : "",
-          }).toString()
+        }).toString()
         return fetch("/api/measuring_information/amount?" + params).then(this.getResponse)
     }
 }
