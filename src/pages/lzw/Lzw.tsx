@@ -7,12 +7,7 @@ import { downloadFile } from "../../utils/downloadFile";
 import Table from "../../components/Table";
 
 export default function Lzw() {
-    const [file, details, setFile, setCompressedFile] = useCompressionService(LZWService)
-
-    useEffect(() => {
-        if (!file) return
-        downloadFile(file)
-    }, [file])
+    const [_, details, setFile, setCompressedFile] = useCompressionService(LZWService)
 
     const [showDetails, setShowDetails] = useState(true)
     const lzwDetails = details ? details as LZWDetails : { size: 0, compression_ratio: 0, dictionary: [] };
