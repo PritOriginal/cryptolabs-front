@@ -32,7 +32,7 @@ export default function Huffman() {
                         Выбрать файл
                     </SelectFile>
                     <SelectFile onSelectedFile={onSelectedCompressFile}>
-                        Открыть сжатый файл
+                        Выбрать сжатый файл
                     </SelectFile>
                     <Checkbox checked={showDetails} onChange={onChangeShowDetails} >
                         <p>Показать детали</p>
