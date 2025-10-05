@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SelectFile from "../../components/SelectFile";
 import LZWService, { DictionaryItem, LZWDetails } from "../../services/LZWService";
 import useCompressionService from "../../utils/useCompressionService";
 import Checkbox from "../../components/Checkbox";
-import { downloadFile } from "../../utils/downloadFile";
 import Table from "../../components/Table";
 
 export default function Lzw() {
