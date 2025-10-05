@@ -17,7 +17,7 @@ export default function useCompressionService(service: CompressionService): [Fil
                 console.log(details);
 
                 const blob = formData.get("data") as Blob;
-                const file = new File([blob], "test");
+                const file = new File([blob], "test.txt");
                 downloadFile(file);
             })
             .catch((error) => {
@@ -34,7 +34,7 @@ export default function useCompressionService(service: CompressionService): [Fil
                 console.log(details);
 
                 const blob = formData.get("data") as Blob;
-                const file = new File([blob], "test");
+                const file = new File([blob], "test.txt");
                 setCurrentFile(file);
                 downloadFile(file);
             })
